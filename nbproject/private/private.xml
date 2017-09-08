@@ -2,14 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/home/vignesh/NetBeansProjects%20(2)/OnQuik-Channel/src/java/com/channel/servlet/ClientServlet.java</file>
-            <file>file:/home/vignesh/NetBeansProjects%20(2)/OnQuik-Channel/web/client.html</file>
-            <file>file:/home/vignesh/NetBeansProjects%20(2)/OnQuik-Channel/web/js/script.js</file>
-            <file>file:/home/vignesh/NetBeansProjects%20(2)/OnQuik-Channel/src/java/com/channel/servlet/Client.java</file>
-            <file>file:/home/vignesh/NetBeansProjects%20(2)/OnQuik-Channel/web/index.html</file>
-            <file>file:/home/vignesh/NetBeansProjects%20(2)/OnQuik-Channel/web/WEB-INF/web.xml</file>
-            <file>file:/home/vignesh/NetBeansProjects%20(2)/OnQuik-Channel/src/java/com/channel/servlet/Server.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
