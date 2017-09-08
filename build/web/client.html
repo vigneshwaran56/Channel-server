@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+   
+   <body>
+   
+       <form>
+           <input id="textmessage" type ="text">
+         <input onclick ="sendMessage();" value="Send Message" type ="button">
+        </form>
+      <br><textarea id ="messageTextArea" rows="10" cols="50"></textarea>
+   
+       <script type="text/javascript">
+
+               var ws = new WebSocket("ws://localhost:8080/OnQuik-Channel/api/abcdef");
+	var messageTextArea = document.getElementById("messageTextArea");
+        ws.onopen = function(message){processOpen(message);};
+        ws.onclose = function(message){processClose(message);};
+        ws.onerror = function(message){processError(message);};
+        ws.onmessage = function (message) {
+                alert(message.data);  
+         messageTextArea.value += message.data;
+           
+            };
+
+             function  processOpen(){
+                 messageTextArea.value +="server constants<br/>";
+             };
+            function sendMessage(){
+                var message = document.forms[0].elements[0].value;
+                document.forms[0].elements[0].value = "";
+                if(message !== "close"){
+                ws.send(message);
+                console.log(message);
+                messageTextArea.value +="send to server ==>"+message+"<br/>";
+            }else ws.close();
+            }
+           function processClose(){
+                messageTextArea.value += "server disconnected<br/>";
+           }
+         
+         function processError(){
+              messageTextArea.value += "Error <br/>";
+         }
+      </script>
+      
+   </body>
+</html>
